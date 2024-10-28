@@ -37,22 +37,3 @@ public class Reta {
         double yIntersecao = this.a * xIntersecao + this.b;
         return new double[]{xIntersecao, yIntersecao}; 
     }
-
-    //kitcopos test area >:(
-    public static void main(String[] args) {
-        // Criando retas para testes
-        Reta reta1 = new Reta(2, 3); //y = 2x + 3
-        Reta reta2 = new Reta(1, 2, 3, 8); //(1, 2)  (3, 8)
-
-        // Testando se um ponto pertence à reta
-        System.out.println("Ponto (1, 5) pertence à reta1? " + reta1.pertenceAReta(1, 5));
-
-        // Encontrando o ponto de interseção
-        double[] intersecao = reta1.pontoDeIntersecao(reta2);
-        if (intersecao != null) {
-            System.out.println("Ponto de interseção: (" + intersecao[0] + ", " + intersecao[1] + ")");
-        } else {
-            System.out.println("As retas são paralelas.");
-        }
-    }
-}
