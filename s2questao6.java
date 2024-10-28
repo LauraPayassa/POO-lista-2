@@ -20,7 +20,13 @@ class Pessoa{
         this.mae = null;
     }
 
-    public boolean equals(Pessoa outra){
-        return this.nome.equals(outra.nome) && this.mae.equals(outra.mae);
+ public boolean equals(Pessoa outra){
+    if (outra == null) return false;
+    if (this.mae == null && outra.mae == null) {
+        return this.nome.equals(outra.nome);
     }
-}
+    if (this.mae == null || outra.mae == null) {
+        return false;
+    }
+    return this.nome.equals(outra.nome) && this.mae.equals(outra.mae);}
+} 
